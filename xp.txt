@@ -1,0 +1,96 @@
+*********************************
+** Customer Supplied Site Info **
+*********************************
+Name: KVN Siva Kumar
+Company: MARUTI SUZUKI INDIA LTD
+Address: Old Palam Gurgaon Road Sector 18 Gurgaon, 122015
+Country: IN
+Phone: +919999563634
+Email: hp_nitin.soni@maruti.co.in
+Hours of Availability: 
+NPS Check: NPS Passed.
+
+*******************************
+** Data Center Supplied Info **
+*******************************
+Current Event: https://isee-amc.austin.hpe.com/console/apps/application/event/eventattachment.aspx?id=6292a679-99ec-42c2-a15c-7e523b2f3ec6&index=1
+Use the iSAPort portal to view device details and collections: https://isaport.glb.itcs.hpecorp.net/customerdevice/secure/deviceDetail/gdid/0d5d7b25-4853-47bf-a15a-5dc9198bc789
+Workflow Case Title: Service : df682e : DRIVE ERROR(NORMAL R/W) - DRIVE PORT TEMPORARY ERROR(PATH 0) - HDDR10-1E;
+Support Delivery Queue: INA_CR Click;
+V5 Business: XP Storage;
+Local Weekend: False;
+Local Holiday: False;
+
+*******************
+** Event Details **
+*******************
+Incident ID: 6292a679-99ec-42c2-a15c-7e523b2f3ec6
+Event Source: IRS 7.x (7.5.0.0016);
+
+ATTENTION! 
+Please inform the customer that IRS v5 has reached end of life support on March 1, 2016. 
+A prepared note in various languages to customers can be found here: https://ent302.sharepoint.hpe.com/teams/CP-ops/End%20of%20Support%20Life/Forms/AllItems.aspx ;
+
+Device: 
+
+Collector=CTRACK 2.40.00
+dkcRevision=50-09-98-00/22
+XP connection type=Internet
+
+Description: DRIVE ERROR(NORMAL R/W)
+deviceClass=HWref_code=df682e
+FailingFRULocation=HDDR10-1E
+FailingFRUPartNumber=n/a
+Part Number by BLI: HITX5524255-C (dka), HITX5524271-D (-E) (hdd), 
+part_serialnumber=3HW2WVAC
+sim_creation_time=26 May 2016 11:39:33
+sim_serialnumber=46933
+
+action_code=58000000;41001100;4608482E;4C600101
+error_parts=SEE MANUAL(TROUBLESHOOT SECTION);DKA PCB(DKF 8MP);HDD canister(DKS2C-K072FC);FSW PCB
+error_location=;DKA-1B;HDDR10-1E;FSWR10-LL
+
+********************************
+** Additional Contact Details **
+********************************
+HP Account not available
+CAS/CMS Contacts:
+1. Name: Wintel Team Wintel Team
+   Title: 
+   Contact Type: Customer_Account
+   E-Mail: IT_Wintel.Omsteam@maruti.co.in
+   Telephone: 01244393493
+   Preferred Language: en
+   Availability: 
+
+2. Name: Wintel Team Wintel Team
+   Title: 
+   Contact Type: Cust_Secondary_Acct
+   E-Mail: IT_Wintel.Omsteam@maruti.co.in
+   Telephone: 01244393493
+   Preferred Language: en
+   Availability: 
+
+***************************************
+** RSDC Detected Entitlement Details **
+***************************************
+EntitlementStatus: VALID
+SLA: DCC
+Coverage: 
+Response Time: Days1to5: ; Day6: ; Day7: ; Holiday: 
+SAID returned by ES: 102388937645
+Customer entered SAID: 102388937645
+Entitlement Type: CONTRACT
+Serial Number: 
+Product Number: 
+
+***************************
+** System Identification **
+***************************
+Model: XP12000
+Reporting Device Serial Number: 11534
+Reporting Device Product Number: AE002A
+
+*******IMPORTANT NOTE************
+When contacting customer please make sure that the automatically populated email address is matching contact details provided in the "Customer Supplied Info" section located at the top of the case notes.
+****************************************
