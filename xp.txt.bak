@@ -1,0 +1,88 @@
+*********************************
+** Customer Supplied Site Info **
+*********************************
+Name: Tesco OPS Team ALWAYS SEND EMAIL IN PARALLEL
+Company: TESCO PLC
+Address: Cheshunt Data Centre Delamare Road Cheshunt, Herts. EN8 9SL
+Country: GB
+Phone: +44 1462470850
+Email: stgsupport@uk.tesco.com
+Hours of Availability: 24 X 7 365 DAYS
+NPS Check: NPS Passed.
+
+*******************************
+** Data Center Supplied Info **
+*******************************
+Current Event: https://isee-amc.austin.hpe.com/console/apps/application/event/eventattachment.aspx?id=cc4babe9-992d-4de0-813e-86552cfa3ffb&index=1
+Use the iSAPort portal to view device details and collections: https://isaport.glb.itcs.hpecorp.net/customerdevice/secure/deviceDetail/gdid/7e893355-153a-45ff-8f19-fc8365b97dc1
+Workflow Case Title: Service : 50100f : DRIVE ERROR(ORM) - DRIVE TEMPORARY ERROR - HDDR00-0F;
+Support Delivery Queue: GBS_MC CIM;
+V5 Business: XP Storage;
+Local Weekend: False;
+Local Holiday: False;
+
+*******************
+** Event Details **
+*******************
+Incident ID: cc4babe9-992d-4de0-813e-86552cfa3ffb
+Event Source: IRS 7.x (7.4.0.0021);
+
+ATTENTION! 
+Please inform the customer that IRS v5 has reached end of life support on March 1, 2016. 
+A prepared note in various languages to customers can be found here: https://ent302.sharepoint.hpe.com/teams/CP-ops/End%20of%20Support%20Life/Forms/AllItems.aspx ;
+
+Device: 
+
+Collector=CTRACK 3.50.00
+dkcRevision=60-08-59-00/00
+XP connection type=Internet
+
+Description: DRIVE ERROR(ORM)
+deviceClass=HWref_code=50100f
+FailingFRULocation=HDDR00-0F
+FailingFRUPartNumber=n/a
+Part Number by BLI: Spare part not recognized by BLI;
+part_serialnumber=3SL121QB
+sim_creation_time=19 May 2016 12:00:23
+sim_serialnumber=62618
+
+action_code=440B500F;44800000;44800100;44800300
+error_parts=HDD canister(DKS2G-K600FC);FSW PCB;FSW PCB;FSW PCB
+error_location=HDDR00-0F;FSWR00-U;FSWR10-U;FSWR20-U
+
+********************************
+** Additional Contact Details **
+********************************
+HP Account not available
+CAS/CMS Contacts:
+1. Name: Mick Condon
+   Title: 
+   Contact Type: Customer_Account
+   E-Mail: 05_GlobalInfrastructureStorageServicesUK@uk.tesco.com
+   Telephone: 01707912156
+   Preferred Language: en
+   Availability: 
+
+***************************************
+** RSDC Detected Entitlement Details **
+***************************************
+EntitlementStatus: VALID
+SLA: DCC
+Coverage: 7Hol
+Response Time: Days1to5: 4HR; Day6: 4HR; Day7: 4HR; Holiday: 4HR
+SAID returned by ES: 107304475876
+Customer entered SAID: 
+Entitlement Type: CONTRACT
+Serial Number: FRHC079084
+Product Number: AE131A
+
+***************************
+** System Identification **
+***************************
+Model: XP24000
+Reporting Device Serial Number: 79084
+Reporting Device Product Number: AE131A
+
+*******IMPORTANT NOTE************
+When contacting customer please make sure that the automatically populated email address is matching contact details provided in the "Customer Supplied Info" section located at the top of the case notes.
+****************************************
