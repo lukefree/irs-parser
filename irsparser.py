@@ -67,12 +67,15 @@ class Dialog(QDialog, Ui_Dialog):
         self.lineEdit_evaSN.setText(eva_dict_parser["Serial Number"])
         self.lineEdit_evaProductNumner.setText(eva_dict_parser["Product Number"])
         self.lineEdit_evaWWN.setText(eva_dict_parser["WWN"])
-        self.lineEdit_evaLocation.setText(eva_dict_parser["FailingFRULocation"])
+        self.lineEdit_evaLocation.setText(eva_dict_parser["Location"])
         self.lineEdit_evaFailingHostName.setText(eva_dict_parser["FailingHostName"])
-        self.lineEdit_evaPartNumber.setText(eva_dict_parser["Part Number"])
+
         self.lineEdit_evaType.setText(eva_dict_parser["Controller Type"])
+        self.lineEdit_evaEventCode.setText(eva_dict_parser["Event Code"])
+        self.lineEdit_evaPartNumber.setText(eva_dict_parser["Part Number"])
         self.lineEdit_evaPartDescription.setText(eva_dict_parser["Part Description"])
-        self.lineEdit_evaRecommendedAction.setText(eva_dict_parser["Recommended action"])
+        self.lineEdit_evaEnvironment.setText(eva_dict_parser['Environment'])
+        self.lineEdit_evaIssue.setText(eva_dict_parser['Issue'])
 
     @pyqtSignature("")
     def on_eva_rstbtn_clicked(self):
@@ -101,7 +104,9 @@ class Dialog(QDialog, Ui_Dialog):
         self.lineEdit_evaPartNumber.clear()
         self.lineEdit_evaType.clear()
         self.lineEdit_evaPartDescription.clear()
-        self.lineEdit_evaRecommendedAction.clear()
+        self.lineEdit_evaEnvironment.clear()
+        self.lineEdit_evaIssue.clear()
+
 
     @pyqtSignature("")
     def on_xprstbtn_clicked(self):
@@ -127,6 +132,8 @@ class Dialog(QDialog, Ui_Dialog):
         self.lineEdit_xpentmntstat.clear()
         self.lineEdit_xpentmnttyp.clear()
         self.lineEdit_xpsla.clear()
+        self.lineEdit_xpEnvironment.clear()
+        self.lineEdit_xpIssue.clear()
         #raise NotImplementedError
     
     @pyqtSignature("")
@@ -154,7 +161,8 @@ class Dialog(QDialog, Ui_Dialog):
         self.lineEdit_xpentmntstat.setText(xp_dict_parser['EntitlementStatus'])
         self.lineEdit_xpentmnttyp.setText(xp_dict_parser['Entitlement Type'])
         self.lineEdit_xpsla.setText(xp_dict_parser['SLA'])
-
+        self.lineEdit_xpEnvironment.setText(xp_dict_parser['Environment'])
+        self.lineEdit_xpIssue.setText(xp_dict_parser['Issue'])
     
     @pyqtSignature("")
     def on_pro_sbmtbtn_clicked(self):
@@ -162,15 +170,60 @@ class Dialog(QDialog, Ui_Dialog):
         Slot documentation goes here.
         """
         # TODO: not implemented yet
-        raise NotImplementedError
-    
+        pro_dict_parser = prolaint_parser.proliant_log_parser(self.textEdit_pro.toPlainText())
+        self.lineEdit_proName.setText(pro_dict_parser['Name'])
+        self.lineEdit_proCompany.setText(pro_dict_parser['Company'])
+        self.lineEdit_proAddress.setText(pro_dict_parser['Address'])
+        self.lineEdit_proEmail.setText(pro_dict_parser['Email'])
+        self.lineEdit_proCountry.setText(pro_dict_parser['Country'])
+        self.lineEdit_proPhone.setText(pro_dict_parser['Phone'])
+        self.lineEdit_proAvailablity.setText(pro_dict_parser['Hours of Availability'])
+        self.lineEdit_proSDQ.setText(pro_dict_parser['Support Delivery Queue'])
+        self.lineEdit_proEntitlementStatus.setText(pro_dict_parser['EntitlementStatus'])
+        self.lineEdit_proSLA.setText(pro_dict_parser['SLA'])
+        self.lineEdit_proEntitlementType.setText(pro_dict_parser['Entitlement Type'])
+        self.lineEdit_proSerialNumber.setText(pro_dict_parser['Serial Number'])
+        self.lineEdit_proProductNumber.setText(pro_dict_parser['Product Number'])
+        self.lineEdit_proServerModel.setText(pro_dict_parser['Server Model'])
+        self.lineEdit_proServerName.setText(pro_dict_parser['Server Name'])
+        self.lineEdit_proLocation.setText(pro_dict_parser['Location'])
+        self.lineEdit_proControllerModel.setText(pro_dict_parser['Controller'])
+        self.lineEdit_proOSVersion.setText(pro_dict_parser['OS Version'])
+        self.lineEdit_proPartNumber.setText(pro_dict_parser['Part Number'])
+        self.lineEdit_proPartDesc.setText(pro_dict_parser['Part Description'])
+        self.lineEdit_proEnvironment.setText(pro_dict_parser['Environment'])
+        self.lineEdit_proIssue.setText(pro_dict_parser['Issue'])
+
+
     @pyqtSignature("")
     def on_pro_rstbtn_clicked(self):
         """
         Slot documentation goes here.
         """
         # TODO: not implemented yet
-        raise NotImplementedError
+        self.textEdit_pro.clear()
+        self.lineEdit_proName.clear()
+        self.lineEdit_proCompany.clear()
+        self.lineEdit_proAddress.clear()
+        self.lineEdit_proEmail.clear()
+        self.lineEdit_proCountry.clear()
+        self.lineEdit_proPhone.clear()
+        self.lineEdit_proAvailablity.clear()
+        self.lineEdit_proSDQ.clear()
+        self.lineEdit_proEntitlementStatus.clear()
+        self.lineEdit_proSLA.clear()
+        self.lineEdit_proEntitlementType.clear()
+        self.lineEdit_proSerialNumber.clear()
+        self.lineEdit_proProductNumber.clear()
+        self.lineEdit_proServerModel.clear()
+        self.lineEdit_proServerName.clear()
+        self.lineEdit_proLocation.clear()
+        self.lineEdit_proControllerModel.clear()
+        self.lineEdit_proOSVersion.clear()
+        self.lineEdit_proPartNumber.clear()
+        self.lineEdit_proPartDesc.clear()
+        self.lineEdit_proEnvironment.clear()
+        self.lineEdit_proIssue.clear()
         
 if __name__ == "__main__":    
     

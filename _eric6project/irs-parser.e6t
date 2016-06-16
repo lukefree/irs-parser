@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-6.0.dtd">
 <!-- eric6 tasks file for project irs-parser -->
-<!-- Saved: 2016-05-29, 20:31:48 -->
+<!-- Saved: 2016-06-16, 19:49:25 -->
 <Tasks version="6.0">
   <ProjectScanFilter></ProjectScanFilter>
-  <Task priority="1" completed="False" type="1" uid="{791c5b6a-86cb-4720-ad1d-643c0f76df57}">
+  <Task priority="1" completed="False" type="1" uid="{341f94aa-cfd7-4fab-96d2-eb30bd13d9cc}">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2016-05-29, 10:34:09</Created>
+    <Created>2016-06-16, 19:49:22</Created>
     <Resource>
       <Filename>irsparser.py</Filename>
-      <Linenumber>33</Linenumber>
+      <Linenumber>37</Linenumber>
     </Resource>
   </Task>
-  <Task priority="1" completed="False" type="1" uid="{5636c9cc-c6ff-4211-b326-9d35e29e5391}">
+  <Task priority="1" completed="False" type="1" uid="{4f4bf731-b74a-4b50-9d5e-e38b8f98b569}">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2016-05-29, 10:34:09</Created>
+    <Created>2016-06-16, 19:49:22</Created>
     <Resource>
       <Filename>irsparser.py</Filename>
-      <Linenumber>41</Linenumber>
+      <Linenumber>45</Linenumber>
     </Resource>
   </Task>
-  <Task priority="1" completed="False" type="1" uid="{00b348b3-3437-4214-8574-6238a1f30b32}">
+  <Task priority="1" completed="False" type="1" uid="{e4908e22-1352-40c4-804f-f7c1f04134ca}">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2016-05-29, 10:34:09</Created>
+    <Created>2016-06-16, 19:49:22</Created>
     <Resource>
       <Filename>irsparser.py</Filename>
-      <Linenumber>49</Linenumber>
+      <Linenumber>53</Linenumber>
     </Resource>
   </Task>
-  <Task priority="1" completed="False" type="1" uid="{8e1da511-4bba-41eb-a475-49fd080a7dbd}">
+  <Task priority="1" completed="False" type="1" uid="{81a542b7-e12e-4e1f-9e22-f07c6a5b8426}">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2016-05-29, 10:34:09</Created>
+    <Created>2016-06-16, 19:49:22</Created>
     <Resource>
       <Filename>irsparser.py</Filename>
-      <Linenumber>57</Linenumber>
+      <Linenumber>85</Linenumber>
     </Resource>
   </Task>
-  <Task priority="1" completed="False" type="1" uid="{700c601a-8ad1-42d0-a686-db0eb94020f2}">
+  <Task priority="1" completed="False" type="1" uid="{a74d24ef-34aa-4ee5-b919-d6b4461ca831}">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2016-05-29, 10:34:09</Created>
+    <Created>2016-06-16, 19:49:22</Created>
     <Resource>
       <Filename>irsparser.py</Filename>
-      <Linenumber>65</Linenumber>
+      <Linenumber>116</Linenumber>
     </Resource>
   </Task>
-  <Task priority="1" completed="False" type="1" uid="{1c03de3e-b358-46d7-864a-65280e50fc5e}">
+  <Task priority="1" completed="False" type="1" uid="{9ca9a24b-5e6b-49f3-95ee-01b791e54412}">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2016-05-29, 10:34:09</Created>
+    <Created>2016-06-16, 19:49:22</Created>
     <Resource>
       <Filename>irsparser.py</Filename>
-      <Linenumber>91</Linenumber>
+      <Linenumber>144</Linenumber>
     </Resource>
   </Task>
-  <Task priority="1" completed="False" type="1" uid="{8b9644ed-75e9-42d5-9db3-cb95755bdc3b}">
+  <Task priority="1" completed="False" type="1" uid="{23f03b6b-35f2-4873-a24c-7725145560d5}">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2016-05-29, 10:34:09</Created>
+    <Created>2016-06-16, 19:49:22</Created>
     <Resource>
       <Filename>irsparser.py</Filename>
-      <Linenumber>118</Linenumber>
+      <Linenumber>172</Linenumber>
     </Resource>
   </Task>
-  <Task priority="1" completed="False" type="1" uid="{037a525d-13f9-459d-9fb9-37bd792e2853}">
+  <Task priority="1" completed="False" type="1" uid="{7c2c147f-6e5f-4e5b-b41b-a80e1b9aac4a}">
     <Summary>TODO: not implemented yet</Summary>
     <Description></Description>
-    <Created>2016-05-29, 10:34:09</Created>
+    <Created>2016-06-16, 19:49:22</Created>
     <Resource>
       <Filename>irsparser.py</Filename>
-      <Linenumber>126</Linenumber>
+      <Linenumber>203</Linenumber>
     </Resource>
   </Task>
 </Tasks>

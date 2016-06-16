@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project irs-parser -->
-<!-- Saved: 2016-05-26, 21:29:57 -->
+<!-- Saved: 2016-06-14, 19:14:03 -->
 <!-- Copyright (C) 2016 Leek, 7101200@qq.com -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -12,11 +12,11 @@
   <Version>0.1</Version>
   <Author>Leek</Author>
   <Email>7101200@qq.com</Email>
+  <Eol index="-1"/>
   <Sources>
     <Source>Ui_irsparser.py</Source>
     <Source>__init__.py</Source>
     <Source>irsparser.py</Source>
-    <Source>logparser.py</Source>
   </Sources>
   <Forms>
     <Form>irsparser.ui</Form>

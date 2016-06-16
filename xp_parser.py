@@ -27,7 +27,9 @@ def xp_log_parser(log):
         'Product Number',
         'Model',
         'Reporting Device Serial Number',
-        'Reporting Device Product Number'], ''
+        'Reporting Device Product Number',
+        'Environment',
+        'Issue'], ''
     )
     name = ''
     value = ''

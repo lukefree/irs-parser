@@ -1,10 +1,37 @@
 __author__ = 'kli1'
-
+import re
 import sys
+import get_value
 reload(sys)
 
 sys.setdefaultencoding('utf8')
 
+search_Name='(?<=^Name:).*?$'
+search_Company='(?<=^Company:).*?$'
+search_Address = '(?<=^Address:).*?$'
+search_Country='(?<=^Country:).*?$'
+search_Phone='(?<=^Phone:).*?$'
+search_Email='(?<=^Email:).*?$'
+search_Availability='(?<=^Hours of Availability:).*?$'
+search_SDQ='(?<=^Support Delivery Queue:).*?$'
+
+search_EntitlementStatus='(?<=^EntitlementStatus:).*?$'
+search_SLA='(?<=^SLA:).*?$'
+search_EntitlementType='(?<=^Entitlement Type:).*?$'
+
+search_SerialNumber='(?<=^Serial Number:).*?$'
+search_ProductNumber='(?<=^Product Number:).*?$'
+search_SystemSerialNumber='(?<=^System Serial Number:).*?$'
+search_SystemProductNumber='(?<=^System Product Number:).*?$'
+search_WWN='(?<=^WWN:).*[0-9A-Za-z]+[[0-9A-Za-z]+[[0-9A-Za-z]+[[0-9A-Za-z]-[0-9A-Za-z]+[[0-9A-Za-z]+[[0-9A-Za-z]+[[0-9A-Za-z]-[0-9A-Za-z]+[[0-9A-Za-z]+[[0-9A-Za-z]+[[0-9A-Za-z]-[0-9A-Za-z]+[[0-9A-Za-z]+[[0-9A-Za-z]+[[0-9A-Za-z]'
+
+search_Location='(?<=Location:).*?$|^Enclosure:.*?$'
+search_FailingHostName='(?<=FailingHostName:).*?$'
+search_EventCode= '(?<=Event Code:).*\([0-9A-Z]+[0-9A-Z] [0-9A-Z]+[0-9A-Z] [0-9A-Z]+[0-9A-Z] [0-9A-Z]+[0-9A-Z]\)$'
+search_ControllerType='(?<=Controller Type:).*HSV+[0-9]+[0-9]+[0-9]'
+search_PartNumberbyBLI='(?<=Part Number by BLI:) [0-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9]-[0-9]+[0-9]+[0-9]'
+search_SparePartNumber= '(?<=Spare part number:) [0-9]+[0-9]+[0-9]+[0-9]+[0-9]+[0-9]-[0-9]+[0-9]+[0-9]'
+search_PartDescription='(?<=Part Description:).*?$'
 
 def eva_log_parser(log):
     #inital dict
@@ -17,71 +44,46 @@ def eva_log_parser(log):
         'Email',
         'Hours of Availability',
         'Support Delivery Queue',
-        'Workflow Case Title',
         'EntitlementStatus',
         'SLA',
         'Entitlement Type',
         'Serial Number',
         'Product Number',
         'WWN',
-        'FailingFRULocation',
-        'Drive Location',
+        'Location',
         'FailingHostName',
+        'EventCode',
         'Controller Type',
         'Part Number',
-        'Spare part number',
-        'Part Number by BLI',
         'Part Description',
-        'Recommended action'], ''
+        'Recommended action',
+        'Environment',
+        'Issue'], ''
     )
     name = ''
     value = ''
 
-    if log:
-        logbuff = log.split('\n')
-        for line in logbuff:
-            new_line = line.replace('=', ':')
-            if new_line.count(':') > 0:
-                value = ''
-                s = new_line.split(':')
-                name = str(s[0]).strip()
-                for i in range(1,len(s)):
-                   value = value + str(s[i]).strip()
-            dict_parser[name] = value
-    #check disk location
-    print 'Drive Location', len(dict_parser['Drive Location'])
-    if len(dict_parser['Drive Location'])>0:
-        dict_parser['FailingFRULocation']=dict_parser['Drive Location']
-    #check Serial number and Product Number
-    if len(dict_parser['Serial Number']):
-        pass
-    else:
-        dict_parser['Serial Number']=dict_parser['System Serial Number']
+    dict_parser['Name'] = get_value.search_value(log,search_Name)
+    dict_parser['Company']  = get_value.search_value(log,search_Company)
+    dict_parser['Address']  = get_value.search_value(log,search_Address)
+    dict_parser['Country'] = get_value.search_value(log,search_Country)
+    dict_parser['Phone'] = get_value.search_value(log,search_Phone)
+    dict_parser['Email'] = get_value.search_value(log,search_Email)
+    dict_parser['Hours of Availability'] = get_value.search_value(log,search_Availability)
+    dict_parser['Support Delivery Queue'] = get_value.search_value(log,search_SDQ)
+    dict_parser['EntitlementStatus'] =get_value.search_value(log,search_EntitlementStatus)
+    dict_parser['SLA'] = get_value.search_value(log,search_SLA)
+    dict_parser['Entitlement Type'] = get_value.search_value(log,search_EntitlementType)
+    dict_parser['Serial Number'] = get_value.search_value(log,search_SerialNumber) if get_value.search_value(log,search_SerialNumber) else get_value.search_value(log,search_SystemSerialNumber)
+    dict_parser['Product Number'] = get_value.search_value(log,search_ProductNumber) if get_value.search_value(log,search_ProductNumber) else get_value.search_value(log,search_SystemProductNumber)
+    dict_parser['WWN'] = get_value.search_value(log,search_WWN)
+    dict_parser['Location'] = get_value.search_value(log,search_Location)
+    dict_parser['FailingHostName'] = get_value.search_value(log,search_FailingHostName)
+    dict_parser['Controller Type'] = get_value.search_value(log,search_ControllerType)
 
-    if len(dict_parser['Product Number']):
-        pass
-    else:
-        dict_parser['Product Number'] = dict_parser['System Product Number']
-
-
-    if dict_parser['Part Number by BLI'].find('Spare part not recognized by BLI') < 0 and len(dict_parser['Part Number by BLI']) >0 :
-        ss='Part Description'
-
-        # Get part number
-        PartNumber=dict_parser['Part Number by BLI'].split(',')
-        dict_parser['Part Number'] = PartNumber[0]
-        # Get part Description
-        PartDescription = PartNumber[1].replace(ss,'')
-        dict_parser['Part Description'] = PartDescription
-
-    elif len(dict_parser['Spare part number']):
-        dict_parser['Part Number'] = dict_parser['Spare part number']
-    else:
-        dict_parser['Part Number'] = 'Not Found'
-
-
-
-
+    dict_parser['Event Code'] = get_value.search_value(log,search_EventCode)
+    dict_parser['Part Number'] = get_value.search_value(log,search_PartNumberbyBLI) if get_value.search_value(log,search_PartNumberbyBLI) else get_value.search_value(log,search_SparePartNumber)
+    dict_parser['Part Description'] = get_value.search_value(log,search_PartDescription)
     return dict_parser
 
 if __name__ == '__main__':
